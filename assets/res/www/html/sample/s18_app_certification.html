@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Guide App</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css">
+	<script type="text/javascript" src="../../js/mcore.min.js"></script>
+</head>
+<body>
+
+    <div class="wrapper">
+		<header id="header">
+			<button type="button" class="btn_back">이전</button>
+			<h1>앱 인증</h1>
+		</header>
+		<p class="cbtn_r" style="top: 1rem;">
+			<button type="button" class="cbtn_close innovation" data-instance-class="menu-close">메뉴보기</button>
+		</p>
+		<section class="content" id="content">
+            <section>
+                <div class="input-box">                   
+                   
+                    <dl>
+                        <dt>입력 값</dt>
+                        <dd>
+                            <p class="input_wrap">
+                                <textarea class="textarea" data-instance-class="textArea" placeholder="입력내용"  title="텍스트 영역 입력박스"></textarea>
+                            </p>
+                        </dd>
+                    </dl>                    
+                </div>	
+				<div class="btn-box3 mgt20">
+                    <button class="btn-secondary w100p pa10" id="userInfoInquiry">기본정보조회</button>
+                    <button class="btn-secondary w100p pa10" id="appCertConfirm">앱인증확인</button>
+                    <button class="btn-secondary w100p pa10" id="loginAppStore">로그인을 위한 앱스토어호출</button>
+                    <button class="btn-secondary w100p pa10" id="updateAppStore">업데이트를 위한 앱스토어호출</button>
+                </div>
+				<div class="half-box">
+					<div class="input-box"> 
+                        <dl>
+                            <dt>결과 값</dt>
+                            <dd>
+                                <p class="input_wrap">
+                                    <textarea class="textarea" data-instance-class="textArea" placeholder="결과 값"></textarea>
+                                </p>
+                            </dd>
+                        </dl>                    
+                    </div>
+				</div>
+            </section>
+		</section>
+        
+	</div>
+
+</body>
+<script type="text/javascript" src="../../js/ui/sample/s18_app_certification.js"></script>
+</html>

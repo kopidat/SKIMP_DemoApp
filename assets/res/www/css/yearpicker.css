@@ -1,0 +1,12 @@
+.yearpicker-container {position: absolute;width: 28rem;font-size: 1rem;max-width: 36rem;border-radius: 1.6rem;overflow: hidden;box-shadow: 0 10px 12px 0 rgb(0 0 0 / 30%);background: #fff;}
+.yearpicker-header {display: flex;width: 100%;border-radius: 0;padding: 0 0;background-color: #ea002c;min-height: 6rem;position: relative;}
+
+.yearpicker-prev {position: absolute;top: 50%;transform: translateY(-50%); left:1rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-6.png') no-repeat center center;background-size:3rem;width: 4rem;height: 100%;}
+.yearpicker-next {position: absolute;top: 50%;transform: translateY(-50%);right:1rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-4.png') no-repeat center center;background-size:3rem;width: 4rem;height: 100%;}
+.yearpicker-header .yearpicker-current {position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);color: #fff;font-size: 2.1rem;}
+.yearpicker-year {display: flex;flex-wrap: wrap;align-items: center;justify-content: center;text-align: center;padding: 0.5rem;}
+
+.yearpicker-items {list-style: none;padding: 1rem 0.5rem;flex: 0 0 23.3%;width: 100%;margin: 0 5%;font-size: 1.4rem;}
+.yearpicker-items.selected {background: #ea002c;color: #fff;border-radius: 2rem;}
+.hide {display: none;}
+.yearpicker-items.disabled {pointer-events: none;color: #bbb;}

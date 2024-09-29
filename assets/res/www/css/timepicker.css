@@ -1,0 +1,15 @@
+
+.ti_tx,.mi_tx,.mer_tx {width: 100%;text-align: center;margin: 1rem 0;}
+.time,.mins,.meridian {width: 6rem;float: left;margin: 0 1rem;font-size: 2rem;color: #2d2e2e;font-family: arial;font-weight: 700;border-radius: 1.4rem;border: 1px solid #ccc;overflow: hidden;}
+.prev,.next {cursor: pointer;padding: 1.8rem 0; width: 100%;margin: auto;background: url(../img/arrow.png) no-repeat;}
+.prev:hover,.next:hover {background-color: #f4f4f4;background-position: center center;}
+.next {background: url(../img/btn-page-arrow-9.png)  no-repeat center center;background-size:3rem;}
+.prev {background: url(../img/btn-page-arrow-8.png)  no-repeat center center;background-size:3rem;}
+.time_pick {position: relative;}
+.timepicker_wrap {padding: 4rem 3rem;border-radius: 1rem;z-index: 998;display: none;box-shadow: 0 .2rem .6rem 0 rgba(0, 0, 0, 0.1);background: #fff;
+	border: 1px solid #ccc;float: left;position: absolute;left: 0;}
+.arrow_top {position: absolute;top: -2.2rem;left: 2rem;}
+.arrow_top:before{content: "";width: 2rem;position: absolute;height: 2rem;-webkit-transform: rotate(45deg);border: 1px solid#ccc;border-bottom: 0;border-right: 0;
+    top: 12px;z-index: 10;background: white;}
+input.timepicki-input {border-radius: .5rem;float: none;margin: 0;text-align: center;width: 70%;font-size: 1.6rem;color: #000;}
+a.reset_time {float: left;margin-top: .5rem;color: #000;}

@@ -1,0 +1,108 @@
+
+/** Form Element Formatting **/
+html{font-size:62.5%;} /* rem 기준 폰트 사이즈 */
+  /* Phone */
+@media only screen and (min-width:320px) {
+    html{font-size:62.5%;} 
+}
+@media only screen and (max-width:768px) {
+    html{font-size:62.5%;} 
+}
+/* Tablet */
+@media only screen and (min-width:768px) {
+    html{font-size:62.5%;}/* 임의 조정 */
+}
+
+
+.search-group input[type="text"].cal {
+    font-family: verdana, sans-serif;
+}
+.form-group {  margin-bottom: 10px; display: block; position: relative;width:30rem;}
+.form-control { width: 100%; background-color: #fff;font-weight: normal; color: #333; position: relative; height: 3rem; line-height: 3rem; padding: 1.5rem 0 .2rem 0; border-radius: .4rem;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-control, .form-control:focus { outline: none; border: none; border-bottom: solid 1px #ccc; box-shadow: none; border-radius: 0; font-size: 1.6rem;text-transform: uppercase;color: #585858;  }
+.form-control-placeholder {position: absolute;left:0px;top: 2.2rem;padding: 2px 0 0 0px;transition: all 200ms;color: #333;width: 95%;font-size: 1.4rem; text-transform: uppercase;}
+.form-control:focus + .form-control-placeholder, .form-control:valid + .form-control-placeholder, .form-control:focus + .form-control-placeholder, .form-control:focus + label.error + .form-control-placeholder, .form-control:valid + label.error + .form-control-placeholder { transform: translate3d(0, -120%, 0); font-size: 12px!important; }
+.form-control:focus{ -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; }
+
+/*Datepicker css starts */
+#custom-dp-wrapper {border:solid 1px #d8d8d8; margin-top: 1px;  background: #fff; border-radius: 0; padding:10px 10px; position: relative; box-shadow: 0 0 10px #f1f1f1; -moz-box-shadow: 0 0 10px #f1f1f1; -webkit-box-shadow: 0 0 10px #f1f1f1; }
+#custom-dp-wrapper select , #custom-dp-wrapper select:hover , #custom-dp-wrapper select:focus { border:none !important; outline: none !important;  -webkit-appearance: none; -moz-appearance: none; text-indent: 1px; text-overflow: '';}
+#custom-dp-wrapper select {background: url(../images/date-select-arrow.png) 50px 8px no-repeat !important; }
+#custom-dp-wrapper.month-view { 
+	width: 100%;z-index: 4;position: absolute;top: 50% !important;left: 50% !important;transform: translate(-50%, -50%) !important;
+	text-align: center;display: flex;z-index: 999;height: 100%;
+}
+
+#custom-dp-wrapper.month-view::before {content: '';display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;background: #000;opacity: .6;}
+#custom-dp-wrapper.month-view .custom-dp {position: relative;background: #fff;width: 90%;margin: auto;display: inline-block;max-width: 36rem;border-radius: 1.6rem;overflow: hidden;box-shadow: 0 10px 12px 0 rgb(0, 0, 0, 0.3);}
+
+#custom-dp-wrapper.quarter-view { width: 948px; }
+#custom-dp-wrapper thead tr td {font-size: 12px;font-weight: normal;line-height: 15px;padding: 6px 0;border: solid 1px transparent !important;border-radius: 50%;height: 20px;width: 33px;text-align:center;vertical-align: middle;background: none !important;color: #000 !important;text-transform: uppercase;}
+#custom-dp-wrapper td {padding: .5rem .3rem;text-align: center;}
+#custom-dp-wrapper td a { 
+	font-size: 1.4rem; font-weight: normal !important; line-height: 1.5rem; padding: .6rem 0; border: solid 1px transparent !important; border-radius: 50%; height: 3rem; width: 3rem; text-align: center; 
+	vertical-align: middle; background: none !important; color: #333 !important; text-decoration:none;display: block;text-indent: -1px;margin: auto;
+}
+#custom-dp-wrapper td.active a{color: #fff !important;background: #ea002c !important;}
+#custom-dp-wrapper tr td.today a{ background: #999 !important; color:#fff !important ;}
+#custom-dp-wrapper tr td a:hover  { background: #ff7a00 !important; color: #FFF !important;} 
+#custom-dp-wrapper tr td.non-day a  { cursor: default;pointer-events: none;} 
+#custom-dp-wrapper .custom-dp-header {border-radius: 0;padding: 0 0;    background-color: #ea002c;min-height: 6rem;}
+#custom-dp-wrapper .custom-dp-header #custom-dp-wrapper-title{border: none;background: #f1f1f1;margin:0 !important;}
+#custom-dp-wrapper .prev-month,#custom-dp-wrapper .next-month , #custom-dp-wrapper .prev-year , #custom-dp-wrapper .next-year,  
+#custom-dp-wrapper .next-quarter , #custom-dp-wrapper .prev-quarter ,  
+#custom-dp-wrapper .prev-yr-quarter {
+	position: absolute;left:0px;top: 0px;width: 3rem;height: 6rem;font-size: 1.8rem;color: #fff !important;
+	cursor: pointer;border-radius: 50%;
+}
+
+
+.datepicker-month-dropdown, .datepicker-year-dropdown,.datepicker-quarter-dropdown { 
+	position: absolute; left:0px; top: 0px;  border:solid 1px #333; font-size: 1.6rem; color: #000 !important;font-weight: bold;
+	cursor: pointer; 
+}
+
+#custom-dp-wrapper .prev-month,#custom-dp-wrapper .prev-quarter {left:4rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-6.png') no-repeat center center;background-size:3rem;}
+
+#custom-dp-wrapper .next-month,#custom-dp-wrapper .next-quarter {left: auto;right: 4rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-4.png') no-repeat center center;background-size:3rem;}
+#custom-dp-wrapper .prev-year {left: 1rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-7.png') no-repeat center center;background-size:3rem;}
+
+#custom-dp-wrapper .next-year {left: auto;right: 1rem;font-size: 0; background:#ea002c url('../img/btn-list-arrow-5.png') no-repeat center center;background-size:3rem;}
+#custom-dp-wrapper .datepicker-month-dropdown, #custom-dp-wrapper .datepicker-year-dropdown, #custom-dp-wrapper .datepicker-quarter-dropdown { 
+	position: absolute; left:0px; top: 0px;   color: #fff !important; margin: 0; font-size: 2.1rem;
+}
+#custom-dp-wrapper .datepicker-year-dropdown {top:1.8rem;left: 50%;margin-left: -6rem;width: 8rem !important;background: none;opacity: 1;}
+#custom-dp-wrapper .datepicker-month-dropdown,#custom-dp-wrapper .datepicker-quarter-dropdown{top:1.8rem;left: 50%;margin-left: 1.5rem;width: 4rem !important;background: none;opacity: 1;}
+#custom-dp-wrapper.quarter-view .month-dropdown-view,#custom-dp-wrapper.month-view .quarter-dropdown-view{display: none;}
+#custom-dp-wrapper .single-calender { display: block;padding: 10px 0;}
+#custom-dp-wrapper .single-calender table { width: 100%;}
+#custom-dp-wrapper .newLinks {display: none; float: left; width: 100%; border-top: solid 1px #ccc; text-align: right; padding:13px 0 0 0;}
+#custom-dp-wrapper .newLinks a {float:right; display: inline-block; width: 24px; height: 24px; border: solid 1px #d1d1d1; color: #d1d1d1; border-radius: 50%; text-align: center; text-decoration: none; line-height: 24px; font-size: 12px; font-weight: bold;}
+.switch-view.quarter-view{margin-left:10px;}
+#custom-dp-wrapper .newLinks a:hover , #custom-dp-wrapper.quarter-view  .newLinks a#switch-quarter-view, #custom-dp-wrapper.month-view  .newLinks a#switch-month-view  { color:#00668C; border:solid 1px  #00668C;}
+#custom-dp-wrapper .month-dropdown-view,#custom-dp-wrapper .quarter-dropdown-view,#custom-dp-wrapper .year-dropdown-view { position: relative;color: #fff;font-size: 1.8rem;}
+#custom-dp-wrapper .single-calender h4 { margin: 8px 0;border-bottom: 1px solid #c6c6c6;padding-bottom: 5px;}
+#custom-dp-wrapper .month-dropdown-view:before {
+    content: '년';display: block;position: absolute;left: 50%;top: 2.1rem;width: 2rem;height: 2rem;color: #fff;font-size: 1.8rem;margin-left: -1rem;}
+#custom-dp-wrapper .month-dropdown-view:after {content: '월';display: block;position: absolute;left: 50%;top: 2.1rem;width: 2rem;height: 2rem;color: #fff;font-size: 1.8rem;margin-left: 4rem;}
+#custom-dp-wrapper .custom-datepicker-title {border:none; border-bottom: solid 1px #d8d8d8; background: #fff; margin: 0 !important; text-align: left;line-height: 1.8em; }
+#custom-dp-wrapper .custom-datepicker-month{width:100% !important;height: 100%; border: none;font-size: 16px;font-weight: normal;line-height: 18px;position: static;padding: 0 0 0 0;color: #666 !important;}
+#custom-dp-wrapper.month-view .custom-datepicker-title{display: none;}
+#custom-dp-wrapper table{font-size: .9em;border-collapse: collapse;}
+#custom-dp-wrapper .disabled { cursor: default !important; pointer-events: none;}
+#custom-dp-wrapper td.disabled { opacity: .35; background-image: none;}
+.form-control.datepicker{background: url(../images/date-select-arrow.png) no-repeat right -854px;-webkit-transition: none ;
+transition: none;}
+
+
+
+
+
+
+
+/*** Datepicker Footer Links Months and Quarters Ends ***/

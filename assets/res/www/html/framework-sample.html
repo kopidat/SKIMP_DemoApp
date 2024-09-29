@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Hello! Mobile!</title>
+</head>
+
+<body>
+    <h1>Framework Sample Page!</h1>
+    <div>
+        <h5>0. Framework api</h5>
+        <li><button id="btnAppInstallCheck">앱설치 여부</button></li><br>
+        <li><button id="btnAES256Encrypt">AES256 암호화</button></li><br>
+        <li><button id="btnAES256Decrypt">AES256 복호화</button></li><br>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/mcore.min.js"></script>
+<script type="text/javascript">
+    
+// 앱설치 여부
+document.querySelector('#btnAppInstallCheck').onclick=function() {
+    M.execute('exWNCommonAppInstallCheck');
+};
+
+// AES256 암호화
+document.querySelector('#btnAES256Encrypt').onclick=function() {
+    var plainText = 'encryptStringTest';
+    var encKey = 'SPORTALMINI_2021';
+    M.execute('exWNAES256Encrypt', plainText, encKey);
+}
+
+// AES256 복호화
+document.querySelector('#btnAES256Decrypt').onclick=function() {
+    var encText = 'DI4uVBjuAK5s5T4w6vZLfxYJWSoah6NFjlYhrX1INM0=';
+    var decKey = 'SPORTALMINI_2021';
+    M.execute('exWNAES256Decrypt', encText, decKey);
+}
+    
+M.onReady(function(e) {
+    
+});
+
+M.onHide(function(e){
+    
+});
+
+M.onRestore(function(e) {
+    
+});
+
+</script>
+
+</html>

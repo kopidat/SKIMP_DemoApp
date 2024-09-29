@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Guide App</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/sample.css">
+	<script type="text/javascript" src="../../js/mcore.min.js"></script>
+</head>
+<body>
+
+	<header id="header" data-header="quick">
+		<button type="button" onclick="return false;" data-button="back" class="tbtn_l tbtn_prev" id="btn_back">이전</button>
+		<h1>UI Kit</h1>
+	</header>
+	<div class="login-box">
+		<div class="file-box input_wrap input">                     
+			<ul>
+				<li>
+					<label>
+						<span>파일정보</span>
+						<input type="text" title="파일정보" class="text" id="fileNm" value="sample.pdf">
+					</label>
+				</li>
+				<li>
+					<label>
+						<span>URL정보</span>
+<!-- 						<input type="text" title="URL정보" class="text" id="fileUrl" value="https://dev-skimp.skinnovation.com/img/sample.pdf">-->
+						<input type="text" title="URL정보" class="text" id="fileUrl" value="http://10.242.54.194/img/sample.pdf">
+					</label>                        
+				</li>
+			</ul> 
+			<div class="btn-box login">
+				<!-- disabled 아이디패스 미입력시 onclick="location.href='s13_certCenter_mobile2.html'" -->
+				<button class="btn-confirm w100p"  id="btnViewer">문서뷰어 확인</button>
+			</div>                                     
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../../js/ui/sample/s13_certCenter_mobile.js"></script>
+</html>

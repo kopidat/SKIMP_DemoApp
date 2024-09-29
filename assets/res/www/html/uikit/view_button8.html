@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Guide App</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/mcore.min.js"></script>
+<!--	<script>-->
+<!--		-->
+
+<!--	</script>-->
+</head>
+<body>
+
+<!-- Header Start -->
+<header id="header">
+	<h1>Spinner</h1>
+	<button type="button" class="tbtn_l tbtn_prev">이전</button>
+	<p class="tbtn_r">
+		<button type="button" class="tbtn_home" title="홈">홈</button>
+		<button type="button" class="tbtn_menu" title="전체메뉴">전체메뉴</button>
+	</p>
+</header>
+<!--// Header End -->
+
+<!-- container Start -->
+<div id="container">
+	<p class="cbtn_r">
+		<button type="button" class="cbtn_menu" data-instance-class="sample-btn">샘플보기</button>
+	</p>
+	<section id="scroll">
+		<div>
+		<!-- scroll 영역 -->
+
+			<div id="control" class="br_t1">
+				<section>
+					<h3>싱글선택</h3>
+					<button type="button" class="btn-select w100p" id="selectSingle">싱글선택</button>
+				</section>
+				<section>
+					<h3>멀티선택</h3>
+					<button type="button" class="btn-select w100p" id="selectMulti">멀티선택</button>
+				</section>
+				<ul class="multi-list" id="multiSelectedList">
+					<li>
+						<p></p>
+					</li>
+				</ul>
+				<section>
+					<h3>검색(팝업)</h3>
+					<div class="po_re">
+						<input type="tel" class="input-type w100p" id="selectSearch">
+						<button type="button" class="btn_search" id="selectSearchPop">찾기</button>
+					</div>
+				</section>
+				<ul class="multi-list" id="searchPopSelectedList">
+					<li>
+						<p></p>
+					</li>
+				</ul>
+			</div>
+
+
+		<!--// scroll 영역 -->
+		</div>
+	</section>
+</div>
+<!--// container End -->
+
+	<!-- 콤보박스 선택 - 싱글선택 -->
+	<div class="popup-layer single" id="layer100">        
+		<div class="pop-table bottom">
+			<div class="pop-bottom">
+				<div class="bg"></div>
+				<div class="pop-layer">
+					<div class="m_box">	
+						<div class="pop-header">
+							<button type="button" class="close">닫기</button>
+						</div>	
+								  
+						<div class="content max-h">
+							<div class="account-target bdt20">
+								<ul>
+									<li><button class="btn-account">선택리스트 1</button></li>
+									<li><button class="btn-account">선택리스트 2</button></li>
+									<li><button class="btn-account">선택리스트 3</button></li>
+									<li><button class="btn-account">선택리스트 4</button></li>
+									<li><button class="btn-account">선택리스트 5</button></li>
+									<li><button class="btn-account">선택리스트 6</button></li>
+									<li><button class="btn-account">선택리스트 7</button></li>
+									<li><button class="btn-account">선택리스트 8</button></li>
+								</ul>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 콤보박스 선택 - 멀티선택 -->
+	<div class="popup-layer multi" id="layer101">        
+		<div class="pop-table bottom">
+			<div class="pop-bottom">
+				<div class="bg"></div>
+				<div class="pop-layer">
+					<div class="m_box">	
+						<div class="pop-header">
+							<button type="button" class="close">닫기</button>
+						</div>	
+						<div class="all-check">
+							<label class="checkbox2">
+								<input type="checkbox" class="checkbox3" id="multiListAll">
+								<span>전체선택</span>
+							</label>
+						</div>  
+						<div class="content max-h">
+							<div class="account-target bdt20">							
+								<ul id="multiList">
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트1</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트2</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트3</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트4</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트5</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트6</span>
+										</label>
+									</li>								
+								</ul>
+							</div>						
+						</div>
+						<div class="pop-footer-btn hbox">
+							<button class="btn-secondary w100p pa10 account-close" id="selectMultiConfirm">확인</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 검색(팝업) - 멀티선택 -->
+	<div class="popup-layer multi" id="layer102">        
+		<div class="pop-table bottom">
+			<div class="pop-bottom">
+				<div class="bg"></div>
+				<div class="pop-layer">
+					<div class="m_box">	
+						<div class="pop-header">
+							<button type="button" class="close">닫기</button>
+						</div>	
+						<div class="customer-search-top">
+							<input type="text" class="input-type w100p" placeholder="검색어를 입력해 주세요." id="selectSearchPopSearch">
+							<button class="btn_search" id="btnSelectSearchPopSearch">검색</button>
+						</div>
+						<div class="all-check">
+							<label class="checkbox2">
+								<input type="checkbox" class="checkbox3" id="searchPopListAll">
+								<span>전체선택</span>
+							</label>
+						</div>  
+						<div class="content max-h">
+							<div class="account-target bdt20">							
+								<ul id="searchPopList">
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트1</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트2</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트3</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트4</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트5</span>
+										</label>
+									</li>
+									<li>
+										<label class="checkbox2">
+											<input type="checkbox" class="checkbox3">
+											<span>선택리스트6</span>
+										</label>
+									</li>								
+								</ul>
+							</div>						
+						</div>
+						<div class="pop-footer-btn hbox">
+							<button class="btn-secondary w100p pa10 account-close" id="selectSearchPopConfirm">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- 전체메뉴 레이어팝업: Start -->
+<div id="popWrap" class="none"></div>
+<!--// 전체메뉴 레이어팝업: End -->
+
+<!--<script type="text/javascript">-->
+
+<!--</script>-->
+</body>
+<script type="text/javascript" src="../../js/ui/uikit/view_button8.js"></script>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Hello! Mobile!</title>
+</head>
+
+<body>
+	<h1>Hello! Mobile!</h1>
+	<div>
+        <h5>0. 기본 테스트</h5>
+        <button id="btngoSimpleAuthSamplePage" onclick="goSimpleAuthSample()">간편인증 샘플 페이지 이동</button><br><br>
+		<h5>1. 스토어 라이브러리 - 정직원 소스에서 var memberYN 값 N 설정하면 협력직원</h5>
+		<button id="btnAuth" onclick="storeLibAuth()">인증</button><br><br>
+		<button id="btnGoInstallPage" onclick="storeLibGoInstallPage()">앱스토어 설치 페이지 이동</button><br><br>
+		<button id="btnLogin" onclick="storeLibLogin()">로그인을 위해 스토어호출</button><br><br>
+		<button id="btnUpdate" onclick="storeLibUpdate()">업데이트를 위해 스토어호출</button><br><br>
+		<button id="btnGetUserInfo" onclick="storeGetUserInfo()">앱스토어 로그인 사용자 정보</button><br><br>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/mcore.min.js"></script>
+<script type="text/javascript">
+
+var memberYN = "Y"; // 정직원 여부(Y: 정직원, 그외:협력직원)
+
+// 공통 Callback
+/**
+ * 인증 체크 callback
+ * resultJsonObj
+ * {"code":"1000", "msg":"정상 인증"}
+ * code
+ * 1000 : 정상 인증
+ * 2000 : 인증 오류
+ * 3000 : ID 또는 비밀번호 오류
+ * 4000 : Major 업데이트된 App이 스토어에 배포된 상태
+ * 5000 : token 만료
+ * 6000 : token 값이 일치하지 않음
+ * 9000 : 기타 오류
+ * 9001 : 스토어가 설치되어 있지 않음
+ * 9002 : MDM앱이 설치되어 있지 않음
+ */
+function exWNCallback(resultJsonObj) {
+	console.log("exWNCallback(resultJsonObj)");
+
+	console.log('type of resultJsonObj = ' + typeof resultJsonObj);
+	console.log(JSON.stringify(resultJsonObj));
+	alert(JSON.stringify(resultJsonObj));
+}
+
+function storeLibAuth() {
+	console.log('function storeLibAuth()');
+	M.execute("exWNStoreLib_auth", memberYN, "exWNCallback");
+};
+
+function storeLibGoInstallPage() {
+	console.log('function storeLibGoInstallPage()');
+	M.execute("exWNStoreLib_goAppStoreInstallPage", memberYN);
+};
+
+function storeLibLogin() {
+	console.log('function storeLibLogin()');
+	M.execute("exWNStoreLib_login", memberYN, "schemeLogin");
+};
+
+function storeLibUpdate() {
+	console.log('function storeLibUpdate()');
+	M.execute("exWNStoreLib_update", memberYN, "schemeUpdate");
+};
+
+function storeGetUserInfo() {
+	console.log('function storeGetUserInfo()');
+	M.execute("exWNStoreLib_getUserInfo", memberYN, "exWNCallback");
+};
+
+function goSimpleAuthSample(){
+    M.page.html({
+        url: 'simple-auth-sample.html',
+        param: { "poo" : "9fb2afe4e07b4", "screenCaptureOnOff" : "on"},
+        actionType: 'NEW_SCR'
+    });
+};
+    
+function goFrameworkSample(){
+    M.page.html({
+        url: 'framework-sample.html',
+        actionType: 'NEW_SCR'
+    });
+}
+
+M.onReady(function(e) {
+	
+});
+
+M.onHide(function(e){
+	
+});
+
+M.onRestore(function(e) {
+	
+});
+
+</script>
+
+</html>

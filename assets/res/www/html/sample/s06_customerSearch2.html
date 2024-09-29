@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Guide App</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <!-- 달력 -->
+    <link rel="stylesheet" href="../../css/datepicker.css" />
+    <!-- 시간 -->
+    <link rel="stylesheet" href="../../css/timepicker.css" />
+    <!-- 년도 -->
+    <link rel="stylesheet" href="../../css/yearpicker.css" />
+     <!-- 월 -->
+    <link rel="stylesheet" href="../../css/monthpicker.css" />
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../../js/mcore.min.js"></script>
+    <!-- <script type="text/javascript" src="../../js/mcore.min.js"></script> 이거 때문에 년도가 안떠요--> 
+    <!-- 달력 -->
+    <script src="../../js/datepicker.js"></script>
+    <!-- 시간 -->
+    <script src="../../js/timepicker.js"></script>
+    <!-- 년도 -->
+    <script src="../../js/yearpicker.js"></script>
+    <!-- 월 -->
+    <script src="../../js/monthpicker.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header id="header">
+			<button type="button" onclick="return false;" data-button="back" class="tbtn_l tbtn_prev" id="btn_back">이전</button>
+			<h1>달력조회</h1>
+		</header>
+		<p class="cbtn_r">
+			<button type="button" class="cbtn_close innovation2" data-instance-class="menu-close">닫기</button>
+		</p>
+		<section class="content" id="content">
+
+			<!-- 조회영역 -->
+			<div class="search-box date">
+                <ul>
+                    <li class="hbox"><input type="text" id="timepicker1" class="timepicker w100p" title="조회시작일" placeholder="HH.MM" autocomplete="off"></li>
+                    <li class="hbox"><input type="text" id="datePickerStart" class="datepicker start_date_call" title="조회시작일" placeholder="YYYY.MM.DD" autocomplete="off" readonly></li>
+                    <li class="hbox">
+                        <div class="flex">
+                            <input type="text" id="dateSearchStart" class="datepicker start_date_call" title="조회시작일" placeholder="YYYY.MM.DD" autocomplete="off" readonly>
+                       </div>
+                        <span class="txt-mark">~</span>
+                        <div class="flex">
+                            <input type="text" id="dateSearchEnd" class="datepicker end_date_call" title="조회종료일"  placeholder="YYYY.MM.DD"  autocomplete="off" readonly>
+                        </div>
+                    </li>
+                    <li class="hbox"><input type="text" class="yearpicker" value="" placeholder="YYYY.MM" autocomplete="off" readonly/></li>
+                    <li class="hbox"><input id="datepicker" class="monthpicker" type="text" autocomplete="off" readonly/></li>
+                </ul>
+                <div class="search-box-btn hbox">
+                    <button type="button" class="btn-secondary w100p mgt10 br50 pa10" id="searchBtn">검색</button>
+                </div>
+			</div>
+
+			<!-- 조회전 활성화 -->
+			<div id="nodata" class="no_data">
+				<div>
+					<img src="../../img/component-input-search.png" alt="아이콘">
+					<p>입력 후 [검색]버튼을 선택해주세요.</p>
+				</div>
+			</div>
+			
+		</section>
+	</div>
+</body>
+<script type="text/javascript" src="../../js/ui/sample/s06_customerSearch2.js"></script>
+</html>
